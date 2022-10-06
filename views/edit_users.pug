@@ -1,0 +1,11 @@
+html 
+  head 
+    title= message
+  body 
+    h1= message
+
+    form(method="post", action="/users/edit/" + data.id)
+      input(type="hidden", name="_method", value="PUT")
+      input(type="text", name="name", value=data.name)
+      input(type="text", name="lastname", value=data.lastname)
+      input(type="submit", value="save")

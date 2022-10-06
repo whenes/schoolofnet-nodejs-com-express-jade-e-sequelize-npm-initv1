@@ -1,0 +1,20 @@
+html 
+  head 
+    title= message
+  body 
+    h1= message
+
+    table 
+      thead 
+        tr 
+          th Name 
+          th Lastname 
+      tbody 
+        each obj in data
+          tr 
+            td= obj.name
+            td= obj.lastname
+            td 
+              form(method="post", action="/users/" + obj.id)
+                input(type="hidden", name="_method", value="DELETE")
+                button(type="submit", value="Delete") Delete

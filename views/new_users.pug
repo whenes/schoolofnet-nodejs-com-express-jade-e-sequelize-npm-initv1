@@ -1,0 +1,10 @@
+html 
+  head 
+    title= message
+  body 
+    h1= message
+
+    form(method="post", action="/users/create")
+      input(type="text", name="name")
+      input(type="text", name="lastname")
+      input(type="submit", value="save")
